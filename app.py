@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from config import Config
 from models import db, Usuario, Tarea
 
@@ -22,8 +22,13 @@ def home():
 def login():
     return render_template('login.html')
 
-@app.route('/signup')
+@app.route('/signup', method=['GET', 'POST'])
 def signup():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        correo = request.form['correo']
+        contracena = request.form['contracena']
+        return
     return render_template('signup.html')
 
 @app.route('/about')
