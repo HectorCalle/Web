@@ -1,4 +1,4 @@
-<html lang="es"></html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
         <main class="form-signin w-100 m-auto">
             <div class="row my-3">
                 <div class="col-lg-4">
-                    <a href="{{url_for('home')}}" class="btn btn-outline-dark">
+                    <a href="{{ url_for('home') }}" class="btn btn-outline-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                         </svg>
@@ -36,10 +36,10 @@
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
                 <label class="form-label">¿No tienes una cuenta? Regístrate.</label>
-                <a href="{{url_for('signup')}}" class="w-100 btn btn-lg btn-primary">Regístrate</a>
+                <a href="#" class="w-100 btn btn-lg btn-primary">Regístrate</a>
                 <p class="mt-5 mb-3 text-muted">© 2025 Microsoft Education Hub - ITDB</p>
             </form>
         </main>
-        <script src="{{ url_for('static', filename='css/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     </body>
 </html>
