@@ -30,4 +30,4 @@ class Tarea(db.Model):
     fecha_vencimiento = db.Column(db.DateTime, nullable=False)
     completada = db.Column(db.Boolean, default=False)
     prioridad = db.Column(db.String(50), nullable=False)
-    usuario_id = db.Column(db.Integer, db.Foreign_key('usuarios.id'), nullable=False)
+    usuario_id = db.Column(db.Integer, db.ForeignKey('usuarios.id'), nullable=False)

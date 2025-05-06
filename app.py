@@ -1,6 +1,18 @@
 from flask import Flask, render_template
+from config import Config
+from models import db, Usuario, Tarea
 
 app = Flask(__name__)
+
+#configuracion de la declaracion flask de la base de datos usuario
+app.config.from_object(Config)
+
+#inicia la base de datos
+db.init_app(app)
+
+#crear la base de datos si no existe
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def home():
@@ -30,7 +42,7 @@ def view_task():
 @app.route('/task/create')
 def create_task():
     return render_template('create_task.html')
-#Crear una ruta y la vista correspondiente para renderizar un html llamado "create_task.html"
+
 
 
 
