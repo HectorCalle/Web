@@ -57,7 +57,7 @@
                         {{ tarea.descripcion}}
                     </p>
                     <div class="d-flex justify-content-between mt-4">
-                        <form method="POST" action="{{ url_for('complete_task', id=tarea.id) }}">
+                        <form method="POST" action="{{ url_for('complete_task', id=tarea.id) }}  " onchange="this.submit()">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="Completada" name="completada"> 
                                 <label class="form-check-label" for="Completada">Marcar como Completada</label>

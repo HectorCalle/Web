@@ -67,9 +67,9 @@
                     </div>
                     <p class="mb-3">{{ tarea.descripcion }}</p>
                     <div class="row px-3 d-flex">
-                        <form class="col-lg-6" method="POST" action="{{ url_for('complete_task', id=tarea.id) }}">
+                        <form class="col-lg-6" method="POST" action="{{ url_for('complete_task', id=tarea.id) }}" onchange="this.submit()">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="completada" name="completada" {% if tarea.completada = True %}checked{% endif %}> 
+                                <input class="form-check-input" type="checkbox" role="switch" id="completada" name="completada" {% if tarea.completada == True %}checked{% endif %}> 
                                 <label class="form-check-label" for="completada">Marcar como Completada</label>
                             </div>
                         </form >
